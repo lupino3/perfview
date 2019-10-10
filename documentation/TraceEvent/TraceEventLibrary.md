@@ -10,7 +10,7 @@ the TraceEvent library to do it.
 
 Microsoft.Diagnostics.Tracing.TraceEvent is a [nuget package](https://www.nuget.org/packages/Microsoft.Diagnostics.Tracing.TraceEvent/)  available from nuget.org.   This library works on both the .NET Desktop (V4.5 and up) as well
 a .NET Core (NetStandard 1.6 and up).   Parts of the library work on Linux, but ETW is a Windows
-specific technology and thus that part (which is alot of the package) only works on Windows.   
+specific technology and thus that part (which is most of the package) only works on Windows.   
 
 The data model for ETW data is non-trivial, and the data is large (which means that you have to care
 about efficiency).  There is also the question of decoding events (they are logged as binary
@@ -24,7 +24,7 @@ Is your guide for this.    Fundamentally however, the traceEvent library simply 
 a set of .NET class definitions as a Nuget Package.   Thus you only need to create a .NET
 project (it can be .NET Core or .Net Desktop), add a reference to the Microsoft.Diagnostics.Tracing.TraceEvent nuget library
 (right click on the project -> Manage Nuget Packages) and start using the APIs.  Here 
-is a trivial example that logs all the kernel, clr and dyanmic events in an ETL (ETW Trace File). 
+is a trivial example that logs all the kernel, clr and dynamic events in an ETL (ETW Trace File). 
 ```
     using Microsoft.Diagnostics.Tracing;
     using System;
@@ -78,4 +78,4 @@ on it in Solution Explorer -> Set as Startup Project) and run it (F5)  By defaul
 * Release Notes - the [Releases](https://github.com/Microsoft/perfview/releases) page 
 for PerfView also shows the releases for the TraceEvent library.   Note that PerfView's 
 version numbers and TraceEvent Version numbers are not kept in lock step. 
-The version numbers that begin with T are for TraceEvent, the ones with V coorespond to PerfView.  
+The version numbers that begin with T are for TraceEvent, the ones with V correspond to PerfView.  
